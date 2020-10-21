@@ -45,9 +45,9 @@ public class ScoreFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		FragmentScoreBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_score, container, false);
-		binding.setScore(this);
-		binding.setHome(homeGoalScorerList);
-		binding.setAway(awayGoalScorerList);
+		binding.setFragment(this);
+		binding.setHomeGoalScorerList(homeGoalScorerList);
+		binding.setAwayGoalScorerList(awayGoalScorerList);
 		getParentFragmentManager().setFragmentResultListener(HOME_REQUEST_KEY, this, new FragmentResultListener() {
 			@Override
 			public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {

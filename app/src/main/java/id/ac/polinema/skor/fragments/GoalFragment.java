@@ -35,8 +35,8 @@ public class GoalFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		FragmentGoalBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_goal,container,false);
-		binding.setGoal(this);
-		binding.setScrorer(goalScorer);
+		binding.setGoals(this);
+		binding.setGoalScorer(goalScorer);
 		requestKey=GoalFragmentArgs.fromBundle(getArguments()).getRequestKey();
 		return binding.getRoot();
 	}
